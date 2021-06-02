@@ -2,7 +2,7 @@
 
 <h1>Pet Histories</h1>
 
-<table>
+<table class='table'>
   <thead>
     <tr>
       <th>Weight</th>
@@ -18,14 +18,15 @@
         <td><%= pet_history.weight %></td>
         <td><%= pet_history.heigth %></td>
         <td><%= pet_history.description %></td>
-        <td><%= link_to 'Show', pet_history %></td>
-        <td><%= link_to 'Edit', edit_pet_history_path(pet_history) %></td>
-        <td><%= link_to 'Destroy', pet_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', pet_history, class:"btn btn-secondary text-light" %></td>
+        <td><%= link_to 'Edit', edit_pet_history_path(pet_history), class:"btn btn-secondary text-light" %></td>
+        <td><%= link_to 'Destroy', pet_history, class:"btn btn-secondary text-light", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Pet History', new_pet_history_path %>
+<div class="text-right">
+<%= link_to 'New Pet History', new_pet_history_path, class:"btn btn-secondary text-light"%>
+</div>
